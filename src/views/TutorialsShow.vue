@@ -5,7 +5,7 @@
     <!-- <img v-bind:src="tutorial.url" v-bind:alt="tutorial.name" />
     <p>Width: {{ tutorial.width }}</p>
     <p>Height: {{ tutorial.height }}</p> -->
-    <router-link to="/tutorials">Back to all tutorials</router-link>
+    <!-- <router-link to="/tutorials">Back to all tutorials</router-link> -->
   </div>
 </template>
 
