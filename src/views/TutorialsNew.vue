@@ -50,6 +50,7 @@ export default {
   methods: {
     createTutorial: function () {
       this.newTutorialParams.topic_ids = this.checkedTopics;
+      this.newTutorialParams.language_ids = this.checkedLanguages;
       axios
         .post("/tutorials", this.newTutorialParams)
         .then((response) => {
