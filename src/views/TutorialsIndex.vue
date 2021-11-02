@@ -2,7 +2,6 @@
   <div class="tutorials-index">
     <h1>All Tutorials</h1>
     <div v-for="tutorial in tutorials" v-bind:key="tutorial.id">
-      {{ tutorial }}
       <h2>{{ tutorial.description }}</h2>
       <a v-bind:href="tutorial.hyperlink">go to tutorial</a>
       <!-- <img v-bind:src="tutorial.url" v-bind:alt="tutorial.name" />
