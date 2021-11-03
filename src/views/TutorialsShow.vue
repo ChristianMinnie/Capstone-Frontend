@@ -1,15 +1,19 @@
 <template>
   <div class="tutorials-show">
     <h2>{{ tutorial.description }}</h2>
-    <p>Topics: {{ tutorial.topics }}</p>
-    <p>Languages: {{ tutorial.languages }}</p>
+    <div v-for="topic in tutorial.topics" v-bind:key="`topic-${topic.id}`">
+      <p>Topic: {{ topic }}</p>
+    </div>
+    <div v-for="language in tutorial.languages" v-bind:key="`language-${language.id}`">
+      <p>Language: {{ language }}</p>
+    </div>
+    <p>{{ tutorial.hyperlink }}</p>
     <p>Ratings:</p>
-    <div v-for="rating in tutorial.ratings" v-bind:key="rating.id">
+    <div v-for="rating in tutorial.ratings" v-bind:key="`rating-${rating.id}`">
       <p>UXP: {{ rating.uxp_rating }}</p>
       <p>Content: {{ rating.content_rating }}</p>
       <p>Description: {{ rating.description }}</p>
     </div>
-    <p>{{ tutorial.hyperlink }}</p>
     <router-link to="/tutorials">Back to all tutorials</router-link>
     <h2>Ratings</h2>
     <div>

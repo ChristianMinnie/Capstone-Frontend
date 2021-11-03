@@ -4,12 +4,10 @@
     <div v-for="tutorial in tutorials" v-bind:key="tutorial.id">
       <h2>{{ tutorial.description }}</h2>
       {{ tutorial.topics }}
-      <!-- v-for topic in tutorial.topics -->
-      {{ tutorial.languages }}
-      <a v-bind:href="tutorial.hyperlink" target="_blank">go to tutorial</a>
-      <!-- <img v-bind:src="tutorial.url" v-bind:alt="tutorial.name" />
-      <p>Width: {{ tutorial.width }}</p>
-      <p>Height: {{ tutorial.height }}</p> -->
+      <div v-for="language in tutorial.languages" v-bind:key="`language-${language.id}`">
+        {{ tutorial.languages }}
+      </div>
+      <a v-bind:href="tutorial.hyperlink" target="_blank">Link to tutorial</a>
     </div>
   </div>
 </template>
