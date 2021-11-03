@@ -1,11 +1,26 @@
 <template>
   <div class="tutorials-show">
-    {{ tutorial }}
-    <h2>{{ tutorial.name }}</h2>
-    <!-- <img v-bind:src="tutorial.url" v-bind:alt="tutorial.name" />
-    <p>Width: {{ tutorial.width }}</p>
-    <p>Height: {{ tutorial.height }}</p> -->
-    <!-- <router-link to="/tutorials">Back to all tutorials</router-link> -->
+    <h2>{{ tutorial.description }}</h2>
+    <p>Topics: {{ tutorial.topics }}</p>
+    <p>Languages: {{ tutorial.languages }}</p>
+    <p>Ratings:</p>
+    <div v-for="rating in tutorial.ratings" v-bind:key="rating.id">
+      <p>UXP: {{ rating.uxp_rating }}</p>
+      <p>Content: {{ rating.content_rating }}</p>
+      <p>Description: {{ rating.description }}</p>
+    </div>
+    <p>{{ tutorial.hyperlink }}</p>
+    <router-link to="/tutorials">Back to all tutorials</router-link>
+    <h2>Ratings</h2>
+    <div>
+      UXP Rating:
+      <input type="text" v-model="newRatingParams.uxp_rating" />
+      Content Rating:
+      <input type="text" v-model="newRatingParams.content_rating" />
+      Description:
+      <input type="text" v-model="newRatingParams.description" />
+      <button v-on:click="createRating()">Create Rating</button>
+    </div>
   </div>
 </template>
 
@@ -15,6 +30,8 @@ export default {
   data: function () {
     return {
       tutorial: {},
+      newRatingParams: {},
+      errors: [],
     };
   },
   created: function () {
@@ -23,6 +40,20 @@ export default {
       this.tutorial = response.data;
     });
   },
-  methods: {},
+  methods: {
+    createRating: function () {
+      this.newRatingParams.tutorial_id = this.$route.params.id;
+      axios
+        .post("/ratings", this.newRatingParams)
+        .then((response) => {
+          console.log("ratings create", response);
+          this.tutorial.ratings.push(response.data);
+          this.newRatingParams = {};
+        })
+        .catch((error) => {
+          console.log("ratings create error", error.response);
+        });
+    },
+  },
 };
 </script>
