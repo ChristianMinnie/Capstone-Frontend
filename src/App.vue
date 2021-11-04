@@ -14,7 +14,7 @@
       <router-link v-if="isLoggedin()" to="/logout">Logout</router-link>
     </div>
     <div class="container">
-      <div v-if="flashMessage" class="alert alert-success">{{ flashMessage }}</div>
+      <div v-if="flashMessage" class="alert alert-success" v-on:click="flashMessage = ''">{{ flashMessage }}</div>
     </div>
     <router-view />
   </div>
@@ -52,11 +52,12 @@ export default {
   },
   methods: {
     isLoggedin: function () {
-      if (localStorage.getItem("jwt")) {
-        return true;
-      } else {
-        return false;
-      }
+      // if (localStorage.getItem("jwt")) {
+      //   return true;
+      // } else {
+      //   return false;
+      // }
+      return localStorage.getItem("jwt");
     },
   },
 };
