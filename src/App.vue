@@ -7,11 +7,14 @@
       |
       <router-link to="/tutorials">Tutorials</router-link>
       |
-      <router-link to="/signup">Signup</router-link>
+      <router-link v-if="!isLoggedin()" to="/signup">Signup</router-link>
       |
-      <router-link to="/login">Login</router-link>
+      <router-link v-if="!isLoggedin()" to="/login">Login</router-link>
       |
-      <router-link to="/logout">Logout</router-link>
+      <router-link v-if="isLoggedin()" to="/logout">Logout</router-link>
+    </div>
+    <div class="container">
+      <div v-if="flashMessage" class="alert alert-success">{{ flashMessage }}</div>
     </div>
     <router-view />
   </div>
@@ -39,3 +42,22 @@
   color: #42b983;
 }
 </style>
+
+<script>
+export default {
+  data: function () {
+    return {
+      flashMessage: "",
+    };
+  },
+  methods: {
+    isLoggedin: function () {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+};
+</script>
