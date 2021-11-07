@@ -3,10 +3,15 @@
     <div id="nav">
       <router-link to="/">Home</router-link>
       |
-      <router-link to="/tutorials/new">New Tutorial</router-link>
-      |
       <router-link to="/tutorials">Tutorials</router-link>
       |
+      <router-link to="/tutorials/new">New Tutorial</router-link>
+      |
+      <router-link to="topics">Topics</router-link>
+      |
+      <!-- <router-link to="/ratings/new">New Rating</router-link>
+      | -->
+      <router-link to="languages">Languages</router-link>
       <router-link v-if="!isLoggedin()" to="/signup">Signup</router-link>
       |
       <router-link v-if="!isLoggedin()" to="/login">Login</router-link>

@@ -7,6 +7,9 @@ import Logout from "../views/Logout.vue";
 import TutorialsIndex from "../views/TutorialsIndex.vue";
 import TutorialsNew from "../views/TutorialsNew.vue";
 import TutorialsShow from "../views/TutorialsShow.vue";
+import TopicsIndex from "../views/TopicsIndex.vue";
+import LanguagesIndex from "../views/LanguagesIndex.vue";
+import RatingsCreate from "../views/RatingsNew.vue";
 
 Vue.use(VueRouter);
 
@@ -30,6 +33,9 @@ const routes = [
   { path: "/tutorials", name: "tutorials-index", component: TutorialsIndex },
   { path: "/tutorials/new", name: "tutorials-new", component: TutorialsNew },
   { path: "/tutorials/:id", name: "tutorials-show", component: TutorialsShow },
+  { path: "/topics", name: "topics-index", component: TopicsIndex },
+  { path: "/languages", name: "languages-index", component: LanguagesIndex },
+  { path: "/ratings/new", name: "ratings-new", component: RatingsCreate },
 ];
 
 const router = new VueRouter({
