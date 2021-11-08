@@ -5,6 +5,8 @@
       <h2>{{ topic.name }}</h2>
       <div v-for="tutorial in topic.tutorials" v-bind:key="tutorial.id">
         {{ tutorial }}
+        <p>Description: {{ tutorial.description }}</p>
+        <a v-bind:href="tutorial.hyperlink" target="_blank">Link to tutorial</a>
       </div>
     </div>
   </div>
