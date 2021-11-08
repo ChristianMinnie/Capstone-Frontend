@@ -1,11 +1,11 @@
 <template>
   <div class="tutorials-index">
-    <div v-for="topic in tutorial.topics" v-bind:key="`topic-${topic.id}`">
+    <!-- <div v-for="topic in tutorial.topics" v-bind:key="`topic-${topic.id}`">
       <p>Topic: {{ topic }}</p>
     </div>
     <div v-for="language in tutorial.languages" v-bind:key="`language-${language.id}`">
       <p>Language: {{ language }}</p>
-    </div>
+    </div> -->
     <h1>All Tutorials</h1>
     <div>
       Search by Topic:
