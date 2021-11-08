@@ -13,7 +13,9 @@ export default {
       message: "Welcome to Vue.js!",
     };
   },
-  created: function () {},
+  created: function () {
+    console.log("HELLO");
+  },
   methods: {},
 };
 </script>
