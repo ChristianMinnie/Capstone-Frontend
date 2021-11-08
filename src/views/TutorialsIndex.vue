@@ -22,15 +22,20 @@
 
     <div v-for="tutorial in filterBy(tutorials, filter)" v-bind:key="tutorial.id">
       <h2>{{ tutorial.description }}</h2>
+      <a v-bind:href="tutorial.hyperlink" target="_blank">{{ tutorial.hyperlink }}</a>
       <h4>Topics:</h4>
-      {{ tutorial.topics }}
+      <ul>
+        <li v-for="topic in tutorial.topics" v-bind:key="`topic-${topic.id}`">
+          {{ topic.name }}
+        </li>
+      </ul>
+
       <h4>Languages:</h4>
       <ul>
         <li v-for="language in tutorial.languages" v-bind:key="`language-${language.id}`">
           {{ language.name }}
         </li>
       </ul>
-      <a v-bind:href="tutorial.hyperlink" target="_blank">Link to tutorial</a>
     </div>
 
     <!-- <h2>New Topic</h2>

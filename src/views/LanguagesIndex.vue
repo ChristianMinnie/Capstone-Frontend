@@ -4,7 +4,7 @@
     <div v-for="language in languages" v-bind:key="language.id">
       <h2>{{ language.name }}</h2>
       <div v-for="tutorial in language.tutorials" v-bind:key="tutorial.id">
-        {{ tutorial }}
+        <a v-bind:href="tutorial.hyperlink" target="_blank">{{ tutorial.description }}</a>
       </div>
     </div>
   </div>
