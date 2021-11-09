@@ -5,11 +5,19 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Tutorials Index</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.
-          </p>
+
+          <div>
+            Search:
+            <input type="text" v-model="filter" list="tutorial-topics" />
+            <datalist id="tutorial-topics">
+              <option v-for="topic in topics" v-bind:key="`topic-${topic.id}`">
+                {{ topic.name }}
+              </option>
+              <option v-for="language in languages" v-bind:key="`language-${language.id}`">
+                {{ language.name }}
+              </option>
+            </datalist>
+          </div>
         </div>
 
         <div class="row">
@@ -27,8 +35,28 @@
                 <span>
                   <a v-bind:href="tutorial.hyperlink" target="_blank">{{ tutorial.hyperlink }}</a>
                 </span>
-                <h6>UXP Average Rating: {{ tutorial.uxp_average_rating }}</h6>
-                <h6>Content Average Rating: {{ tutorial.content_average_rating }}</h6>
+                <h6>
+                  UXP Average Rating:
+                  <star-rating
+                    v-model="tutorial.uxp_average_rating"
+                    read-only
+                    :increment="0.5"
+                    :show-rating="false"
+                    :star-size="10"
+                    :inline="true"
+                  />
+                </h6>
+                <h6>
+                  Content Average Rating:
+                  <star-rating
+                    v-model="tutorial.uxp_average_rating"
+                    read-only
+                    :increment="0.5"
+                    :show-rating="false"
+                    :star-size="10"
+                    :inline="true"
+                  />
+                </h6>
                 <p>{{ tutorial.description }}</p>
                 <router-link v-bind:to="`/tutorials/${tutorial.id}`">Go to Tutorial</router-link>
                 <!-- <div class="social">
@@ -51,19 +79,6 @@
     <div v-for="language in tutorial.languages" v-bind:key="`language-${language.id}`">
       <p>Language: {{ language }}</p>
     </div> -->
-    <h1>All Tutorials</h1>
-    <div>
-      Search:
-      <input type="text" v-model="filter" list="tutorial-topics" />
-      <datalist id="tutorial-topics">
-        <option v-for="topic in topics" v-bind:key="`topic-${topic.id}`">
-          {{ topic.name }}
-        </option>
-        <option v-for="language in languages" v-bind:key="`language-${language.id}`">
-          {{ language.name }}
-        </option>
-      </datalist>
-    </div>
 
     <div v-for="tutorial in filterBy(tutorials, filter)" v-bind:key="tutorial.id">
       <h2>{{ tutorial.description }}</h2>
@@ -95,8 +110,12 @@
 <script>
 import axios from "axios";
 import Vue2Filters from "vue2-filters";
+import StarRating from "vue-star-rating";
 
 export default {
+  components: {
+    StarRating,
+  },
   mixins: [Vue2Filters.mixin],
   data: function () {
     return {
