@@ -49,7 +49,7 @@
                 <h6>
                   Content Average Rating:
                   <star-rating
-                    v-model="tutorial.uxp_average_rating"
+                    v-model="tutorial.content_average_rating"
                     read-only
                     :increment="0.5"
                     :show-rating="false"
@@ -130,6 +130,7 @@ export default {
     this.indexTutorials();
     this.indexTopics();
     this.indexLanguages();
+    this.$parent.pageDescription = "This is a list of all the tutorials";
   },
   methods: {
     indexTutorials: function () {
