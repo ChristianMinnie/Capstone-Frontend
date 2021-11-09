@@ -4,7 +4,7 @@
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Team</h2>
+          <h2>Tutorials Index</h2>
           <p>
             Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
@@ -27,14 +27,16 @@
                 <span>
                   <a v-bind:href="tutorial.hyperlink" target="_blank">{{ tutorial.hyperlink }}</a>
                 </span>
+                <h6>UXP Average Rating: {{ tutorial.uxp_average_rating }}</h6>
+                <h6>Content Average Rating: {{ tutorial.content_average_rating }}</h6>
                 <p>{{ tutorial.description }}</p>
-                <router-link v-bind:to="`/tutorials/${tutorial.id}`">More details</router-link>
-                <div class="social">
+                <router-link v-bind:to="`/tutorials/${tutorial.id}`">Go to Tutorial</router-link>
+                <!-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""><i class="ri-linkedin-box-fill"></i></a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

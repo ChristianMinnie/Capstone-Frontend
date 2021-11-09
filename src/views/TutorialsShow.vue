@@ -1,9 +1,8 @@
 <template>
   <div class="tutorials-show">
-    {{ tutorial }}
+    <!-- {{ tutorial }} -->
     <h2>{{ tutorial.title }}</h2>
     <p>{{ tutorial.description }}</p>
-    <p>{{ tutorial.uxp_average_rating }}</p>
     <div v-for="topic in tutorial.topics" v-bind:key="`topic-${topic.id}`">
       <p>Topic: {{ topic }}</p>
     </div>
@@ -11,10 +10,10 @@
       <p>Language: {{ language }}</p>
     </div>
     <p>{{ tutorial.hyperlink }}</p>
-    <p>Ratings:</p>
+    <h5>Ratings</h5>
     <div v-for="rating in tutorial.ratings" v-bind:key="`rating-${rating.id}`">
-      <p>UXP: {{ tutorial.average_rating }}</p>
-      <p>Content: {{ rating.content_rating }}</p>
+      <p>UXP: {{ tutorial.uxp_average_rating }}</p>
+      <p>Content: {{ tutorial.content_average_rating }}</p>
       <p>Description: {{ rating.description }}</p>
     </div>
     <router-link to="/tutorials">Back to all tutorials</router-link>
