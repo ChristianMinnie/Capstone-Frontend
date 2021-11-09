@@ -21,13 +21,14 @@
             data-aos-delay="100"
           >
             <div class="member d-flex align-items-start mb-2">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" /></div>
+              <div class="pic"><img v-bind:src="tutorial.image" class="img-fluid" alt="" /></div>
               <div class="member-info">
-                <h4>{{ tutorial.description }}</h4>
+                <h4>{{ tutorial.title }}</h4>
                 <span>
                   <a v-bind:href="tutorial.hyperlink" target="_blank">{{ tutorial.hyperlink }}</a>
                 </span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <p>{{ tutorial.description }}</p>
+                <router-link v-bind:to="`/tutorials/${tutorial.id}`">More details</router-link>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
