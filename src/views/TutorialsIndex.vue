@@ -1,7 +1,7 @@
 <template>
   <div class="tutorials-index">
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    <section id="about" class="team section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Tutorials Index</h2>
