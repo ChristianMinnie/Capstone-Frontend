@@ -10,7 +10,7 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto" href="/">Home</a></li>
-            <li><a class="nav-link scrollto" href="/about">About</a></li>
+            <!-- <li><a class="nav-link scrollto" href="/about">About</a></li> -->
             <li><a class="nav-link scrollto" href="/tutorials">Tutorials</a></li>
             <li><a class="nav-link scrollto" href="/tutorials/new">New Tutorial</a></li>
             <li><a class="nav-link scrollto" href="/topics">Topics</a></li>
@@ -42,7 +42,7 @@
             <p class="animate__animated animate__fadeInUp">
               {{ pageDescription }}
             </p>
-            <!-- <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">See More</a>
           </div>
         </div>
         <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
@@ -56,7 +56,7 @@
     </section>
     <div style="height: 100px"></div>
     <!-- End Hero -->
-    <main id="main">
+    <main id="main" class="container">
       <router-view />
     </main>
 
@@ -145,6 +145,10 @@
 <style>
 #hero {
   height: 500px;
+}
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url(/assets/img/about-bg.png) no-repeat center center fixed;
 }
 </style>
 

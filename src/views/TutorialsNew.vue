@@ -1,30 +1,37 @@
 <template>
   <div class="tutorials-new">
-    <h1>All possible topics</h1>
-
-    <div v-for="topic in topics" v-bind:key="`topic-${topic.id}`">
-      <input type="checkbox" :id="topic.name" :value="topic.id" v-model="checkedTopics" />
-      <label :for="topic.name">{{ topic.name }}</label>
-    </div>
-    <span>Checked topics: {{ checkedTopics }}</span>
-
-    <h1>All possible languages</h1>
-    <div v-for="language in languages" v-bind:key="`language-${language.id}`">
-      <input type="checkbox" :id="language.name" :value="language.id" v-model="checkedLanguages" />
-      <label :for="language.name">{{ language.name }}</label>
-    </div>
-    <span>Checked languages: {{ checkedLanguages }}</span>
-
-    <h1>New Tutorial</h1>
     <form v-on:submit.prevent="createTutorial()">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      Description:
-      <input type="text" v-model="newTutorialParams.description" />
-      URL:
-      <input type="text" v-model="newTutorialParams.hyperlink" />
-      <input type="submit" value="Create" />
+      <h1>New Tutorial</h1>
+
+      <div class="mb-3">
+        <label for="inputURL" class="form-label">Link to tutorial</label>
+        <input type="text" class="form-control" id="inputURL" v-model="newTutorialParams.hyperlink" />
+        <div id="descriptionHelp" class="form-text">Please provide a url for the new tutorial.</div>
+      </div>
+
+      <h4 class="mt-3">Topics</h4>
+      <div class="form-check form-check-inline" v-for="topic in topics" v-bind:key="`topic-${topic.id}`">
+        <input type="checkbox" class="form-check-input" :id="topic.name" :value="topic.id" v-model="checkedTopics" />
+        <label :for="topic.name">{{ topic.name }}</label>
+      </div>
+      <span>Checked topics: {{ checkedTopics }}</span>
+
+      <h4 class="mt-3">Languages</h4>
+      <div class="form-check form-check-inline" v-for="language in languages" v-bind:key="`language-${language.id}`">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          :id="language.name"
+          :value="language.id"
+          v-model="checkedLanguages"
+        />
+        <label :for="language.name">{{ language.name }}</label>
+      </div>
+      <span>Checked languages: {{ checkedLanguages }}</span>
+
+      <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
   </div>
 </template>
