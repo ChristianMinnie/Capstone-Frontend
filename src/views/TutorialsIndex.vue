@@ -80,7 +80,7 @@
       <p>Language: {{ language }}</p>
     </div> -->
 
-    <div v-for="tutorial in filterBy(tutorials, filter)" v-bind:key="tutorial.id">
+    <!-- <div v-for="tutorial in filterBy(tutorials, filter)" v-bind:key="tutorial.id">
       <h2>{{ tutorial.description }}</h2>
       <a v-bind:href="tutorial.hyperlink" target="_blank">{{ tutorial.hyperlink }}</a>
       <h4>Topics:</h4>
@@ -96,7 +96,7 @@
           {{ language.name }}
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <!-- <h2>New Topic</h2>
     <div>

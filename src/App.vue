@@ -65,29 +65,9 @@
       <div class="footer-top">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">About us</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Requests</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Forum</a>
-                </li>
-              </ul>
-            </div>
+            <!-- s -->
 
-            <div class="col-lg-3 col-md-6 footer-links">
+            <!-- <div class="col-lg-3 col-md-6 footer-links">
               <h4>Explore by Topic</h4>
               <ul>
                 <li>
@@ -111,7 +91,7 @@
                   <a href="#">Graphic Design</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
             <div class="col-lg-3 col-md-6 footer-contact">
               <h4>Contact Me</h4>
