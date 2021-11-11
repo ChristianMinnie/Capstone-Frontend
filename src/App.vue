@@ -42,7 +42,7 @@
             <p class="animate__animated animate__fadeInUp">
               {{ pageDescription }}
             </p>
-            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">See More</a>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Take a Look</a>
           </div>
         </div>
         <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
@@ -109,14 +109,6 @@
                 <a href="#" class="github"><i class="bx bxl-github"></i></a>
                 <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
               </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-info">
-              <h3>About Coders Compendium</h3>
-              <p>
-                Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies
-                darta donna mare fermentum iaculis eu non diam phasellus.
-              </p>
             </div>
           </div>
         </div>

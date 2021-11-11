@@ -53,6 +53,7 @@ export default {
   created: function () {
     this.indexTopics();
     this.indexLanguages();
+    this.$parent.pageDescription = "Create a new tutorial";
   },
   methods: {
     createTutorial: function () {

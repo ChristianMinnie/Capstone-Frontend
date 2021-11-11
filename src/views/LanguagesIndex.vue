@@ -4,11 +4,11 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>All Languages</h2>
-          <p>
+          <!-- <p>
             Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
             in iste officiis commodi quidem hic quas.
-          </p>
+          </p> -->
         </div>
 
         <div class="row">
@@ -45,6 +45,7 @@ export default {
   },
   created: function () {
     this.indexLanguages();
+    this.$parent.pageDescription = "Browse by language";
   },
   methods: {
     indexLanguages: function () {

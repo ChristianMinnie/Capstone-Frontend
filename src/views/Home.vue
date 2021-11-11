@@ -4,38 +4,30 @@
       <div class="section-title">
         <h2>About Us</h2>
         <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.
+          This app is intended for software developers who don't want to trawl through the seemingly endless amount of
+          poor quality programming tutorials
         </p>
       </div>
       <div class="row content">
         <div class="col-lg-6">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
+            Using an open source approach, users can upload, share, and rate programming tutorials deemed worthy of
+            adding to your Compendium!
           </p>
           <ul>
             <li>
               <i class="ri-check-double-line"></i>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat
+              Search for tutorials by topic and language
             </li>
             <li>
               <i class="ri-check-double-line"></i>
-              Duis aute irure dolor in reprehenderit in voluptate velit
+              Create a new tutorial by simply adding the URL
             </li>
             <li>
               <i class="ri-check-double-line"></i>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat
+              Rate tutorials by layout and format (UXP), as well as content
             </li>
           </ul>
-        </div>
-        <div class="col-lg-6 pt-4 pt-lg-0">
-          <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
         </div>
       </div>
     </div>
@@ -52,7 +44,7 @@ export default {
     };
   },
   created: function () {
-    this.$parent.pageDescription = "store, share, and rate programming tutorials";
+    this.$parent.pageDescription = "upload, share, and rate programming tutorials";
   },
   methods: {},
 };

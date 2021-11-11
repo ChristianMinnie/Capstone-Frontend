@@ -130,7 +130,7 @@ export default {
     this.indexTutorials();
     this.indexTopics();
     this.indexLanguages();
-    this.$parent.pageDescription = "This is a list of all the tutorials";
+    this.$parent.pageDescription = "View all tutorials and their respective ratings";
   },
   methods: {
     indexTutorials: function () {
