@@ -9,7 +9,7 @@
     <div v-for="language in tutorial.languages" v-bind:key="`language-${language.id}`">
       <p>Language: {{ language }}</p>
     </div>
-    <p>{{ tutorial.hyperlink }}</p>
+    <a v-bind:href="tutorial.hyperlink" target="_blank">{{ tutorial.hyperlink }}</a>
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
